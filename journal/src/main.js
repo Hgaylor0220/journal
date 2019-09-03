@@ -11,8 +11,10 @@ $(document).ready(function() {
     var vowels = 0;
     var consonants = 0;
     vowels = newEntry.vowels();
+    consonants = newEntry.consonants();
 
     console.log(vowels);
+    console.log(consonants);
 
   });
 });
