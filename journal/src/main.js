@@ -13,8 +13,6 @@ $(document).ready(function() {
     vowels = newEntry.vowels();
     consonants = newEntry.consonants();
 
-    console.log(vowels);
-    console.log(consonants);
-
+    newEntry.teaser();
   });
 });

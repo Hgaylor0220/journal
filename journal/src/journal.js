@@ -24,3 +24,28 @@ Entry.prototype.consonants= function() {
   }
   return consonants;
 };
+
+Entry.prototype.teaser= function() {
+  var spaces = 0;
+  var location = 0;
+
+  for (var i=0; i < this.userText.length; i++) {
+    if(this.userText[i] === ".") {
+      location = i;
+      break;
+    } else {
+      if(this.userText[i] === " "){
+        spaces += 1;
+        if (spaces === 8) {
+          location = i;
+          break;
+        }
+      }
+    }
+  }
+  if(location === 0 ) {
+    location = this.userText.length - 1;
+  }
+  this.userText = this.userText.slice(0, location);
+
+};
