@@ -1,11 +1,18 @@
-import { journal } from './journal';
+import { Entry} from './journal';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 
+
 $(document).ready(function() {
-  $('form').submit(function(event) {
+  $('form#inputForm').submit(function(event) {
     event.preventDefault();
+    var newEntry = new Entry($('input#entryInput').val());
+    var vowels = 0;
+    var consonants = 0;
+    vowels = newEntry.vowels();
+
+    console.log(vowels);
 
   });
 });
